@@ -1,0 +1,77 @@
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.map {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+}
+
+div {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    font-size: x-large;
+    height: 43px;
+    width: 100%;
+    background: #3fb0ac;
+    color: white;
+    text-align: left;
+    vertical-align: middle;
+    line-height: 40px;
+}
+
+p {
+    display: inline-block;
+}
+
+#menu {
+  float: right;
+}
+
+.btn {
+    background-color: black;
+}
+
+.side-bar {
+    position: fixed;
+    z-index: 1;
+    background-color: #173e43;
+    height: 615px;
+    padding: 0;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+button {
+    display: inline-block;
+}
+
+input {
+    width: 155px;
+}
+
+
+li {
+    list-style-type: decimal-leading-zero;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 1.5em;
+}
+
+
+.col-sm-3,
+.col-sm-9 {
+    padding: 0;
+}

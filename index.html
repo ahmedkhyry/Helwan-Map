@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Helwan Map</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link href="css/styl.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body>
+        <!-- Do fundemtal Setting Here -->
+        <header class="top-bar">
+            <p>My country 'Helwan'</p>
+            <div id="menu">
+                <button class="btn do" id="menu-toggle">
+                    <i class="fa fa-bars fa-2x"></i>
+                </button>
+            </div>
+        </header>
+        <div class="row">
+            <div class="col-sm-2 side-bar myMenu">
+                <div class="input-group">
+                    <input class="form-control" data-bind="textInput: insert" type="text" id="search" placeholder="Choose location">
+                    <span class="input-group-btn">
+						<button class="btn btn-primary" type="button">
+							<i class="fa fa-filter"></i>
+							Filter
+						</button>
+					</span>
+                </div>
+                <!-- You Will Use filter Here -->
+                <div class="menu">
+                    <ul id="list" data-bind="foreach: menuList">
+                        <li data-bind="text: title, click: $root.animateSearchMarker"></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Here our Map Fire -->
+            <div class="col-sm-10 map" id="map"></div>
+        </div>
+        
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="js/knockout-3.4.2.js"></script>
+        <script src="js/application.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxhYHVdwhPbb_DjjJ0VvRxu7dR7F58YuU&v=3&callback=initMap" onerror="googleError()">
+        </script>
+        
+    </body>
+</html>
