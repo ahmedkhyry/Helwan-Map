@@ -3,14 +3,14 @@
 var map;
 var infowindow;
 var initLocations = [
-        {title: 'عبد القادر المراغي', location: {lat: 29.848723, lng: 31.336856}},
-        {title: 'مترو أنفاق القاهرة', location: {lat: 29.848982, lng: 31.334231}},
-        {title: 'الحديقة اليابانية (حلوان)',location: { lat: 29.848811, lng: 31.340337}},
-        {title: 'المحكمة الدستورية العليا (مصر)', location: {lat: 29.849315, lng: 31.339065}},
-        {title: 'المركز الطبي بحلوان', location: {lat: 29.851187, lng: 31.336489}},
-        {title: 'مجموعة ألفا', location: {lat: 29.8512145, lng: 31.3349293}},
-        {title: 'البنك الأهلي المصري', location: {lat: 29.8490806, lng: 31.3388262}},
-        {title: 'كلية الهندسة (جامعة حلوان)', location: {lat: 29.846755, lng: 31.335369}}];
+        {title: 'Abd al-Qadir Maraghi', location: {lat: 29.848723, lng: 31.336856}},
+        {title: 'Cairo Metro', location: {lat: 29.848982, lng: 31.334231}},
+        {title: 'Orman Garden',location: { lat: 29.848811, lng: 31.340337}},
+        {title: 'Supreme Constitutional Court', location: {lat: 29.849315, lng: 31.339065}},
+        {title: 'Nile Badrawi Hospital', location: {lat: 29.851187, lng: 31.336489}},
+        {title: 'AlphaBay', location: {lat: 29.8512145, lng: 31.3349293}},
+        {title: 'National Bank of Egypt', location: {lat: 29.8490806, lng: 31.3388262}},
+        {title: 'Egy-Tech Engineering', location: {lat: 29.846755, lng: 31.335369}}];
 
 /* =========== Helper Jquery >> 'toggle menu list' =========== */
 
@@ -34,7 +34,7 @@ function infoWindowMsg(marker) {
     if (infowindow.marker != marker) {
         infowindow.marker = marker;
         marker.setIcon('http://maps.google.com/mapfiles/ms/icons/green-dot.png');
-        var wikiUrl = 'https://ar.wikipedia.org/w/api.php?action=opensearch&search=' + marker.title +
+        var wikiUrl = 'https://en.wikipedia.org/w/api.php?action=opensearch&search=' + marker.title +
                   '&format=json&callback=wikicallback';
         var wikiRequestTimeout = setTimeout(function(){
             infowindow.setContent('failed to get wikipedia resources');
